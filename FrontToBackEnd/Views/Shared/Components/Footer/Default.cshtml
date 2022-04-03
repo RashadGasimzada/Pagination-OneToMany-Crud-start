@@ -1,0 +1,215 @@
+﻿@using FrontToBackEnd.Service;
+@inject LayoutService _layoutService;
+@{
+
+    List<Category> categories = _layoutService.GetCategories();
+    List<CategoryName> categoryNames = _layoutService.GetCategoryNames();
+    List<Fruit> fruits = _layoutService.GetFruit();
+    List<Beverage> beverages = _layoutService.GetBeverage();
+}
+<footer>
+    <section id="image">
+        <div class="foot-img">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 mt-5">
+                        <div class="content">
+                            <h4>$20 discount for your first order</h4>
+                            <h2>Join our newsletter and get...</h2>
+                            <h6>Join our email subscription now to get updates on promotions and coupons.</h6>
+                            <div id="email-btn" class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Your Email Addres"
+                                       aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button id="btn-email" class="btn btn-outline-secondary"
+                                            type="button">
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-6 mt-5">
+                        <div class="image">
+                            <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/coupon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="garts">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 mt-4">
+                    <div class="fresh-product">
+                        <span><i class="fas fa-burn"></i>Everyday fresh products</span>
+                    </div>
+
+                </div>
+                <div class="col-3 mt-4">
+                    <div class="delivery">
+                        <span><i class="fas fa-shipping-fast"></i> Free delivery for order over $70</span>
+                    </div>
+
+                </div>
+                <div class="col-3 mt-4">
+                    <div class="daily">
+                        <span><i class="fas fa-cookie"></i>Daily Mega Discounts</span>
+                    </div>
+
+                </div>
+                <div class="col-3 mt-4">
+                    <div class="best-price">
+                        <span><i class="fas fa-donate"></i>Best price on the market</span>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <section id="links">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="fruit">
+                        <h5>FRUIT & VEGETABLES</h5>
+                        <ul>
+                            <li><a href="">Fresh Vegetables</a></li>
+                            <li><a href="">Herbs & Seasonings</a></li>
+                            <li><a href="">Fresh Fruits</a></li>
+                            <li><a href="">Cuts & Sprouts</a></li>
+                            <li><a href="">Exotic Fruits & Veggies</a></li>
+                            <li><a href="">Packaged Produce</a></li>
+                            <li><a href="">Party Trays</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-2">
+                    <div class="breakfast">
+                        <h5>BREAKFAST & DAIRY</h5>
+                        <ul>
+                            <li><a href="">Milk & Flavoured Milk</a></li>
+                            <li><a href="">Butter and Margarine</a></li>
+                            <li><a href="">Cheese</a></li>
+                            <li><a href="">Eggs Substitutes</a></li>
+                            <li><a href="">Honey</a></li>
+                            <li><a href="">Marmalades</a></li>
+                            <li><a href="">Sour Cream and Dips</a></li>
+                            <li><a href="">Yogurt</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-2">
+                    <div class="meat">
+                        <h5>MEAT & SEAFOOD</h5>
+                        <ul>
+                            <li><a href="">Breakfast Sausage</a></li>
+                            <li><a href="">Dinner Sausage</a></li>
+                            <li><a href="">Beef</a></li>
+                            <li><a href="">Chicken</a></li>
+                            <li><a href="">Sliced Deli Meat</a></li>
+                            <li><a href="">Shrimp</a></li>
+                            <li><a href="">Wild Caught Fillets</a></li>
+                            <li><a href="">Crab and Shellfish</a></li>
+                            <li><a href="">Farm Raised Fillets</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-2">
+                    <div class="beverages">
+                        <h5>BEVERAGES</h5>
+                        <ul>
+                            <li><a href="">Water</a></li>
+                            <li><a href="">Sparkling Water</a></li>
+                            <li><a href="">Soda & Pop</a></li>
+                            <li><a href="">Coffee</a></li>
+                            <li><a href="">Milk & Plant-Based Milk</a></li>
+                            <li><a href="">Tea & Kombucha</a></li>
+                            <li><a href="">Drink Boxes & Pouches</a></li>
+                            <li><a href="">Craft Beer</a></li>
+                            <li><a href="">Wine</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-3">
+                    <div class="breads">
+                        <h5>BREADS & BAKERY</h5>
+                        <ul>
+                            <li><a href="">Milk & Flavoured Milk</a></li>
+                            <li><a href="">Butter and Margarine</a></li>
+                            <li><a href="">Cheese</a></li>
+                            <li><a href="">Eggs Substitutes</a></li>
+                            <li><a href="">Honey</a></li>
+                            <li><a href="">Marmalades</a></li>
+                            <li><a href="">Sour Cream and Dips</a></li>
+                            <li><a href="">Yogurt</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section id="Contact-foot">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 mt-5">
+                    <div class="working">
+                        <i class="fas fa-headset"></i>
+                        <h5>8 800 555-55</h5><br>
+                        <span>Working 8:00 - 22:00</span>
+                    </div>
+
+                </div>
+                <div class="col-6 mt-5">
+                    <div class="social">
+                        <h6>Download App on Mobile :</h6>
+                        <i class="fab fa-google-play"></i>
+                        <i class="fab fa-app-store"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+    </section>
+    <section id="end-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 mt-5">
+                    <div class="copyright">
+                        <p>Copyright 2022 © Bacola WordPress Theme. All rights reserved. Powered by KlbTheme.</p>
+                    </div>
+                </div>
+                <div class="col-6 mt-5">
+                    <div class="socila-links">
+                        <a href="">
+                            Privacy Policy
+                        </a>
+                        <a href="">
+                            Terms and Conditions
+                        </a>
+                        <a href="">Cookie</a>
+                        <i class="fab fa-stripe"></i>
+                        <i class="fab fa-paypal"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-visa"></i>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+

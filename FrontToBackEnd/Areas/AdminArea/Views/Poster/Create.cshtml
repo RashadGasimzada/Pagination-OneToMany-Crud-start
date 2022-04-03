@@ -1,0 +1,33 @@
+﻿@model PosterVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container my-5">
+    <form class="forms-sample mt-5" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Images"></label>
+            <input class="form-control" style="width:300px" asp-for="Images">
+            <span class="text-danger" asp-validation-for="Images"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Discount">Discount:</label>
+            <input class="form-control" style="width:300px" asp-for="Discount">
+            <span class="text-danger" asp-validation-for="Discount"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Cookie">Cookie:</label>
+            <input class="form-control" style="width:300px" asp-for="Cookie">
+            <span class="text-danger" asp-validation-for="Cookie"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="WeekCount">WeekCount:</label>
+            <input class="form-control" style="width:300px" asp-for="WeekCount">
+            <span class="text-danger" asp-validation-for="WeekCount"></span>
+        </div>
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <a asp-action="Index" class="btn btn-light">Cancel</a>
+    </form>
+</div>
+

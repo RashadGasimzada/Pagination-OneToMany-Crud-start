@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+@section style{
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/assets/css/flipclock.css">
+    <link rel="stylesheet" href="~/assets/css/regist.css">
+}
+
+<main>
+    <section id="Log-Reg">
+
+        <div class="container">
+            <a href="">Home</a><i class="fas fa-chevron-right"></i><span>My Account</span>
+            <div class="row mt-5">
+                <div class="col-6 mt-5">
+                    <div class="login-page">
+                        <h4>LOGIN</h4>
+                        <hr>
+                        <p>Username or email address *</p>
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <p>Password *</p>
+                        <input type="password" class="form-control" placeholder="Enter your password">
+                        <input id="check-log" type="checkbox"> <span> Remember Me</span><br>
+                        <button id="log-btn" type="button" class="btn btn-primary">Log In</button><br>
+                        <a href="">Lost your password?</a>
+                    </div>
+
+                </div>
+                <div class="col-6 mt-5">
+                    <div class="register-page">
+                        <h4>REGISTER</h4>
+                        <hr>
+                        <p>Username or email address *</p>
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <p>Password *</p>
+                        <input type="password" class="form-control" placeholder="Enter your password">
+                        <p class="personal">
+                            Your personal data will be used to support your experience throughout
+                            this website, to
+                            manage access to your account, and for other purposes described in our <a href="">Privacy</a> <a href="">Policy</a>
+                        </p>
+                        <button type="button" class="btn btn-danger">Register</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

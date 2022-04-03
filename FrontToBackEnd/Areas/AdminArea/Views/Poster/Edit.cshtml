@@ -1,0 +1,36 @@
+﻿@model Poster
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="img">
+        <img src="~/assets/img/@Model.Image" alt="Slider" style="width:350px; height:350px" />
+    </div>
+    <form class="forms-sample" method="post" asp-action="Edit" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Photo"></label>
+            <input class="form-control" style="width:300px" asp-for="Photo">
+            <span class="text-danger" asp-validation-for="Photo"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Discount">Discount:</label>
+            <input class="form-control" style="width:300px" asp-for="Discount">
+            <span class="text-danger" asp-validation-for="Discount"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Cookie">Cookie:</label>
+            <input class="form-control" style="width:300px" asp-for="Cookie">
+            <span class="text-danger" asp-validation-for="Cookie"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="WeekCount">WeekCount:</label>
+            <input class="form-control" style="width:300px" asp-for="WeekCount">
+            <span class="text-danger" asp-validation-for="WeekCount"></span>
+        </div>
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <a asp-action="Index" class="btn btn-light">Cancel</a>
+    </form>
+</div>
+

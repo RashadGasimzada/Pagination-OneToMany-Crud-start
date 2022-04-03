@@ -1,0 +1,101 @@
+﻿@model Paginate<CardVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+    int count = ((Model.CurrentPage - 1) * 10) + 1;
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="header d-flex justify-content-between my-5">
+                        <h1 class="card-title my-3">Poster</h1>
+                        <div><a class="btn btn-success btn-sm my-4" asp-controller="Poster" asp-action="Create">Create</a></div>
+
+
+
+
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th> No </th>
+                                    <th> Image </th>
+                                    <th> Title </th>
+                                    <th> Old Price </th>
+                                    <th> New Price </th>
+                                    <th> Setting </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var card in Model.Datas)
+                                {
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>
+                                            <img style="width:150px; height:100px; border-radius:unset" src="~/assets/image/@card.Image" alt="Alternate Text" />
+                                        </td>
+                                        <td>
+                                            @card.Title
+                                        </td>
+                                        <td>
+                                            @card.OldPrice
+                                        </td>
+                                        <td>
+                                            @card.NewPrice
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary btn-sm" asp-action="Detail" asp-route-Id="@card.Id"><i class="mdi mdi-account-card-details"></i></a>
+                                            <a class="btn btn-inverse-warning btn-sm" asp-action="Edit" asp-route-Id="@card.Id"><i class="mdi mdi-grease-pencil"></i></a>
+                                            <form style="display:inline;" asp-action="Delete" asp-route-Id="@card.Id">
+                                                <button type="submit" class="btn btn-danger btn-sm"><i class="mdi mdi-delete-forever"></i></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+
+                                    count++;
+                                }
+
+
+
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-3 justify-content-center">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination ">
+                <li class="page-item @(Model.HasPrevious ? "": "disabled")">
+                    <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage-1)">Previous</a>
+                </li>
+                @for (int i = 1; i <= Model.TotalPage; i++)
+                {
+                    <li class="page-item @(i == Model.CurrentPage ? "disabled" : "")">
+                        <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+                    </li>
+                }
+
+                <li class="page-item @(Model.HasNext ? "": "disabled")">
+                    <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage+1)">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+
+
+

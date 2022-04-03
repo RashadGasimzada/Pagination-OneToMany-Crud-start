@@ -1,0 +1,346 @@
+﻿@using FrontToBackEnd.Service;
+@inject LayoutService _layoutService;
+@{
+
+    List<Category> categories = _layoutService.GetCategories();
+    List<CategoryName> categoryNames = _layoutService.GetCategoryNames();
+    List<Fruit> fruits = _layoutService.GetFruit();
+    List<Beverage> beverages = _layoutService.GetBeverage();
+}
+
+
+
+
+<h2 class="nav-tag">Due to the COVID 19 epidemic, orders may be processed with a slight delay</h2>
+<header>
+    <section id="first-nav">
+
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <div class="navbar">
+                        <div class="col-4">
+                            <div class="list">
+                                <ul>
+                                    <li><a asp-controller="about" asp-action="index">About Us</a></li>
+                                    <li><a asp-controller="register" asp-action="index">My account</a></li>
+                                    <li><a href="#">Wishlist</a></li>
+                                    <li><a href="#">Order Tracking</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="center">
+                                <span class="secure-delivery">
+                                    <i class="fas fa-user-shield"></i>100% Secure delivery
+                                    without
+                                    contacting
+                                    the courier
+                                </span>
+                                <div class="call-helping">
+                                    <span>Need help? Call Us: <a href="">+ 0020 500</a></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-2">
+                            <div class="drops">
+                                <div class="dropdown">
+                                    <button id="drip" class="btn btn- dropdown-toggle" type="button"
+                                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        English
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">English</a></li>
+                                        <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                        <li><a class="dropdown-item" href="#">German</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown">
+                                    <button id="drop" class="btn btn- dropdown-toggle" type="button"
+                                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Course
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">USD</a></li>
+                                        <li><a class="dropdown-item" href="#">INR</a></li>
+                                        <li><a class="dropdown-item" href="#">GPB</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </nav>
+        <hr>
+    </section>
+    <section id="second-nav">
+        <div class="container mt-4">
+            <div class="row mt-4">
+                <div class="col-2">
+                    <div class="logo">
+                        <img src="~/assets/img/bacola-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-2 mt-2">
+                    <div class="select-alert">
+                        <button type="button" class="btn btn-" data-toggle="modal" data-target="#exampleModalLong">
+                            Select a Location <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+
+                                        <h6>Enter your address and we will specify the offer for your area.</h6>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="search">
+                                            <input type="search" id="form1" placeholder="Search your location..."
+                                                   class="form-control" />
+                                        </div>
+                                        <div class="location">
+                                            <h3><a href="#">Azerbaijan</a></h3>
+                                            <h3><a href="#">Turkiye</a></h3>
+                                            <h3><a href="#">Pakistan</a></h3>
+                                            <h3><a href="#">Ukraina</a></h3>
+                                            <h3><a href="#">Israel</a></h3>
+                                            <h3> <a href="#">Turkmenstan</a></h3>
+                                            <h3> <a href="#">Iraq</a></h3>
+                                            <h3> <a href="#">Gurcistan</a></h3>
+                                            <h3> <a href="#">Dagestan</a></h3>
+                                            <h3> <a href="#">Portugal</a></h3>
+                                            <h3> <a href="#">Norway</a></h3>
+                                            <h3> <a href="#">Canada</a></h3>
+                                            <h3> <a href="#">US</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="input-group">
+                        <div class="form-outline">
+                            <input type="search" id="form1" placeholder="Search for products..."
+                                   class="form-control" />
+
+                        </div>
+                        <button id="search-btn" type="button" class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="log-users">
+                        <a asp-controller="register" asp-action="index"><i id="log" class="fas fa-user-circle"></i></a>
+                        <a asp-controller="card" asp-action="index"><span id="span">$ @ViewBag.totalPrice</span></a>
+                        
+                        <a asp-controller="card" asp-action="index"><i class="fas fa-cart-arrow-down"> <span> @ViewBag.count</span></i></a>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </section>
+    <section id="third-nav">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-3">
+                    <div class="catagories">
+                        <a class="allCatan" href="#">
+                            @foreach (var category in categories)
+                            {
+                                <i class="fas fa-align-justify"> </i> @category.Name<i class="fas fa-angle-down"></i>
+                            }
+
+                        </a>
+                        <div id="ulli" class="drobovik d-none">
+                            <ul>
+                                <li>
+                                    <a class="fruit" href="#"><i class="fas fa-apple-alt"></i> Fruits & Vegetables <i class="fas fa-angle-right"></i></a>
+                                    <di v class="fruits d-none">
+                                        <ul>
+                                            @foreach (var fruit in fruits)
+                                            {
+                                                <li><a href="#">@fruit.Name</a></li>
+                                            }
+                                        </ul>
+                                    </di>
+                                </li>
+                                <li><a href=""><i class="fas fa-drumstick-bite"></i> Meats & SeaWoods</a></li>
+                                <li><a href=""><i class="fas fa-egg"></i> Breakfast & Dairy</a></li>
+                                <li>
+                                    <a class="bever" href="#"><i class="fas fa-mug-hot"></i> Beverages <i class="fas fa-angle-right"></i></a>
+                                    <div class="beverag d-none">
+                                        <ul>
+                                            @foreach (var beverage in beverages)
+                                            {
+                                                <li><a href="#">@beverage.Name</a></li>
+                                            }
+
+
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#"><i class="fas fa-cookie-bite"></i> Breads & Bakery</a></li>
+                                <li><a href="#"><i class="fas fa-snowflake"></i> Frozen Foods</a></li>
+                                <li><a href="#"><i class="fas fa-cookie"></i> Biscuits & Snacks</a></li>
+                                <li><a href="#"><i class="fas fa-seedling"></i> Grocery & Snaples</a></li>
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-9">
+                    <div class="nav-bar">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <div id="btn-home-group" class="btn-group">
+                                            <button id="home-drop" class="btn btn-  dropdown-toggle" type="button"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a asp-controller="home" asp-action="index">HOME</a>
+                                            </button>
+                                            <div id="home-menu" class="dropdown-menu">
+                                                <ul>
+                                                    <li><a href="#">Home1</a></li>
+                                                    <li><a href="#">Home2</a></li>
+                                                    <li><a asp-controller="home" asp-action="index">Home3</a></li>
+                                                    <li><a href="#">Home4</a></li>
+                                                    <li><a href="#">Home5</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="btn-group">
+                                            <button id="btn-shop" class="btn btn-  dropdown-toggle" type="button"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a c style="text-decoration: none;" asp-controller="shop" asp-action="index">SHOP</a>
+                                            </button>
+                                            <div id="show-drop" class="dropdown-menu">
+                                                <div class="show-menu">
+                                                    <div class="hide-shop">
+                                                        <ul>
+                                                            <li><a href="#">Shop List</a></li>
+                                                            <li><a href="#">Shop Default</a></li>
+                                                            <li><a href="#">Shop Right Sidebar</a></li>
+                                                            <li><a href="#">Shop Wide</a></li>
+                                                            <li><a href="#">Left Sidebar</a></li>
+                                                            <li><a href="#">Load more Button</a></li>
+                                                            <li><a href="#">Infinite Scrolling</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="hide-product">
+                                                        <ul>
+                                                            <li><a asp-controller="productdetail" asp-action="index">Product Detail</a></li>
+                                                            <li><a href="#">Product Default</a></li>
+                                                            <li><a href="#">Product Variable</a></li>
+                                                            <li><a href="#">Product Groupe</a></li>
+                                                            <li><a href="#">Product External</a></li>
+                                                            <li><a href="#">Product Downloadable</a></li>
+                                                            <li><a href="#">Product With Video</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-types">
+                                                        <ul>
+                                                            <li><a href="#">Product Types</a></li>
+                                                            <li><a href="#">Single Type 1</a></li>
+                                                            <li><a href="#">Single Type 2</a></li>
+                                                            <li><a href="#">Single Type 3</a></li>
+                                                            <li><a href="#">Single Type 4</a></li>
+                                                            <li><a href="#">Thumbnails Left</a></li>
+                                                            <li><a href="#">Zoom Image</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="show-pages">
+                                                        <ul>
+                                                            <li><a asp-controller="shop" asp-action="index">Shop Pages</a></li>
+                                                            <li><a asp-controller="card" asp-action="index">Cart</a></li>
+                                                            <li><a href="#">Checkout</a></li>
+                                                            <li><a asp-controller="register" asp-action="index">My Accaunt</a></li>
+                                                            <li><a href="#">Wishlist</a></li>
+                                                            <li><a href="#">order Tracking</a></li>
+                                                            <li><a href="#">Order on Whatsapp</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="shop-layouts">
+                                                        <ul>
+                                                            <li><a href="#">Shop Layouds</a></li>
+                                                            <li><a href="#">Two Columns</a></li>
+                                                            <li><a href="#">Third Columns</a></li>
+                                                            <li><a href="#">Third Columns Wide</a></li>
+                                                            <li><a href="#">Four Columns</a></li>
+                                                            <li><a href="#">Four Columns Wide</a></li>
+                                                            <li><a href="#">Five Columns Wide</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#"><i class="fas fa-drumstick-bite"></i> MEATS & SEAFOOD</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#"><i class="fas fa-cookie-bite"></i> BAKERY</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#"><i class="fas fa-mug-hot"></i> BEVERAGES</a>
+                                    </li>
+                                    <li class="nav-item"><a asp-controller="blog" asp-action="index">BLOG</a></li>
+                                    <li class="nav-item"><a asp-controller="contact" asp-action="index">CONTACT</a></li>
+                                </ul>
+
+                            </div>
+                        </nav>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <hr>
+    </section>
+
+</header>

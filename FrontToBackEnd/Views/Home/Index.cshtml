@@ -1,0 +1,386 @@
+﻿@model HomeVM 
+@{
+    ViewData["Title"] = "Index";
+}
+@section style{
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/assets/css/flipclock.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+}
+
+<main>
+    <section id="wrapper">
+
+        <div id="owl" class="owl-carousel owl-theme">
+
+
+            @foreach (var slider in Model.Sliders)
+            {
+                
+                <h3>@slider.Desc<img src="~/assets/img/@slider.Image" alt=""></h3>
+            }
+
+        </div>
+    </section>
+    <section id="prod">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-3">
+                    <div class="cart1">
+                        <div class="card">
+                            <img class="card-img-top img"
+                                 src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/baverages-1.jpg"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                                <h6>Beverages</h6>
+                                <p>11 items</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="double-cart1">
+                        <div class="card biscuit">
+                            <div class="image1">
+                                <img id="img1"
+                                     src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/biscuitssnacks-1.jpg"
+                                     alt="">
+                                <div class="heath">
+                                    <h6>Biscuits & Snacks</h6>
+                                    <p>6 items</p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="card  fruit">
+                            <div class="image2">
+                                <img id="img2" class="card-img-left"
+                                     src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/fruitvegetables-1.jpg"
+                                     alt="">
+                                <div class="heath1">
+                                    <h6>Fruits & Vegetables</h6>
+                                    <p>12 Items</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="double-cart2">
+                        <div class="card breads">
+                            <div class="image3">
+                                <img id="img3"
+                                     src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/breadbakery-1.jpg"
+                                     alt="">
+                                <div class="heath2">
+                                    <h6>Breads & Bakery</h6>
+                                    <p>6 Items</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card grocery">
+                            <div class="image4">
+                                <img id="img4"
+                                     src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/category-image2.png"
+                                     alt="">
+                                <div class="heath3">
+                                    <h6>Grocery & Staples</h6>
+                                    <p>7 Items</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="double-cart3">
+                        <div class="card breakfast">
+                            <div class="image5">
+                                <img id="img5"
+                                     src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/dairy-1.jpg" alt="">
+                                <div class="heath4">
+                                    <h6>Breakfast & Dairy</h6>
+                                    <p>8 Items</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card needs">
+                            <div class="image6">
+                                <img id="img6"
+                                     src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/household-1.jpg"
+                                     alt="">
+                                <div class="heath5">
+                                    <h6>Household Needs</h6>
+                                    <p>1 Items</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="double-cart4">
+                        <div class="card frozen">
+                            <div class="image7">
+                                <img id="img7"
+                                     src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/category-image4.png"
+                                     alt="">
+                                <div class="heath6">
+                                    <h6>Frozen Foods</h6>
+                                    <p>7 Items</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card meats">
+                            <div class="image8">
+                                <img id="img8"
+                                     src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/meat-1.jpg" alt="">
+                                <div class="heath7">
+                                    <h6>Meats & Seafood</h6>
+                                    <p>5 Items</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section id="timer-prod">
+        <div class="container death ">
+            <div class="timerdeath">
+                <div class="deathcontent">
+                    <div class="deathheader">
+                        <div class="header-txt">
+                            <h4>
+                                Deals of the <h3>WEEK!</h3>
+                            </h4>
+                        </div>
+                        <div class="clock"></div>
+                    </div>
+                    <div class="death-detal">
+                        <div class="img">
+                            <div class="death-discount">19%</div>
+                            <a href="">
+                                <img src="~/assets/img/product-image-50.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pr-detal">
+                        <div class="pr">
+                            <h5>$5.49</h5>
+                            <h4>$4.49</h4>
+                        </div>
+                    </div>
+                    <div class="name-detal">
+                        <h3>
+                            <a href="">
+                                Chobani Complete Vanilla Greek Yogurt
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="stock rateing">
+                        <span>1kg</span>
+                        <span>IN STOCK</span>
+                    </div>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="available">
+                        <h6>
+                            AVAILABLE 49
+                        </h6>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row products">
+               
+                @foreach (var cards in Model.Cards)
+                {
+                    @if (cards.Id <= 8)
+                    {
+                        <div class="mycard col-lg-4 col-md-6 col-sm-12">
+
+                            <img class=" card-img-top"
+                                 src="~/assets/image/@cards.Image"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">@cards.Title</h5>
+                                <span class="stock">IN STOCK</span>
+                                <div class="rateing">
+                                    <i class="fas fa-star activerateing"></i>
+                                    <i class="fas fa-star activerateing"></i>
+                                    <i class="fas fa-star activerateing"></i>
+                                    <i class="fas fa-star activerateing"></i>
+                                    <i class="fas fa-star activerateing"></i>
+                                </div>
+                                <div class="price mt-3">
+                                    <span class="oldprice">$@cards.OldPrice</span>
+                                    <span class="newprice mx-2">$@cards.NewPrice</span>
+                                </div>
+                                <form asp-controller="Card" asp-action="AddBasket" asp-route-Id="@cards.Id">
+                                    <button class="btn btn-primary mt-5"  type="submit"> Add to card</button>
+                                </form>
+                            </div>
+                            <div class="percent">@cards.Percent%</div>
+                            <div class="zoom"><i class="fas fa-expand-arrows-alt"></i></div>
+                            <div class="heart"><i class="far fa-heart"></i></div>
+                        </div>
+
+                    }
+
+                }
+
+               
+
+            </div>
+        </div>
+    </section>
+    <section id="shopen">
+        <div class="container shopenies">
+            <div class="row">
+                @foreach (var poster in Model.Posters)
+                {
+                    <div class="col-6 cookie">
+                        <p>@poster.Discount</p>
+                        <h4>@poster.Cookie</h4>
+                        <span>@poster.WeekCount</span>
+                        <a href="" class="btn btn-primary">SHOP</a>
+                        <img src="~/assets/img/@poster.Image" alt="">
+                    </div>
+                }
+               
+
+            </div>
+
+        </div>
+    </section>
+    <section id="carousel2">
+        <div class="container slide mt-5">
+            <div class="owl-carousel owl-theme mycarusel">
+                @foreach (var card in Model.Cards)
+                {
+                    <div class="item card mycard">
+                        <img class=" card-img-top"
+                             src="~/assets/image/@card.Image"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@card.Title</h5>
+                            <span class="stock">IN STOCK</span>
+                            <div class="rateing">
+                                <i class="fas fa-star activerateing"></i>
+                                <i class="fas fa-star activerateing"></i>
+                                <i class="fas fa-star activerateing"></i>
+                                <i class="fas fa-star activerateing"></i>
+                                <i class="fas fa-star activerateing"></i>
+                            </div>
+                            <div class="price mt-3">
+                                <span class="oldprice">$@card.OldPrice</span>
+                                <span class="newprice mx-2">$@card.NewPrice</span>
+                            </div>
+                            <form asp-controller="Card" asp-action="AddBasket" asp-route-Id="@card.Id">
+                                <button class="btn btn-primary mt-5" type="submit"> Add to card</button>
+                            </form>
+                        </div>
+                        <div class="percent">@card.Percent%</div>
+                        <div class="zoom"><i class="fas fa-expand-arrows-alt"></i></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section id="endtainer">
+        <div class="container own-container autoship mt-5 mb-5">
+            <div class="row">
+                @foreach (var card1 in Model.Cards)
+                {
+                    if (card1.Id >= 8)
+                    {
+                        <div class="item card mycard col-3">
+                            <img class=" card-img-top"
+                                 src="~/assets/image/@card1.Image"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">@card1.Title</h5>
+                                <span class="stock">IN STOCK</span>
+                                <div class="rateing">
+                                    <i class="fas fa-star activerateing"></i>
+                                    <i class="fas fa-star activerateing"></i>
+                                    <i class="fas fa-star activerateing"></i>
+                                    <i class="fas fa-star activerateing"></i>
+                                    <i class="fas fa-star activerateing"></i>
+                                </div>
+                                <div class="price mt-3">
+                                    <span class="oldprice">$@card1.OldPrice</span>
+                                    <span class="newprice mx-2">$@card1.NewPrice</span>
+                                </div>
+                                <form asp-controller="Card" asp-action="AddBasket" asp-route-Id="@card1.Id">
+                                    <button class="btn btn-primary mt-5" type="submit"> Add to card</button>
+                                </form>
+                                
+                            </div>
+                            <div class="percent">@card1.Percent
+                            %</div>
+                            <div class="zoom"><i class="fas fa-expand-arrows-alt"></i></div>
+                            <div class="heart"><i class="far fa-heart"></i></div>
+                        </div>
+                    }
+
+                }
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <section id="end-banners">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="zero-image1">
+                        <div class="zero-text">
+                            <h4>Weekend discount 20%</h4>
+                            <h1 style="font-size:50px">Natural Eggs</h1>
+                            <h3>Eat one every day</h3>
+                            <button class="btn btn-secondary">Shop Now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <div class="zero-image2">
+                        <div class="zero-text2">
+                            <h4>Weekend discount 40%</h4>
+                            <h1 style="font-size:50px">Taste the best</h1>
+                            <h3>Shine the morning</h3>
+                            <button class="btn btn-secondary">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="zero-image3">
+                        <div class="zero-text3">
+                            <h4>Weekend discount 30%</h4>
+                            <h1 style="font-size:50px">Ditch the Junk</h1>
+                            <h3>Breakfast made better</h3>
+                            <button class="btn btn-secondary">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
